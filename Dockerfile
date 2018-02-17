@@ -32,3 +32,4 @@ RUN gem install fluent-plugin-rewrite-tag-filter && \
 
 COPY fluent.conf /fluentd/etc/
 COPY entrypoint.sh /bin/
+RUN chmod +x /bin/entrypoint.sh
