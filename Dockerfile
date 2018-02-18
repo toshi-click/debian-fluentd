@@ -20,6 +20,16 @@ RUN echo "${TZ}" > /etc/timezone && \
     ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
 
+# コンテナのデバッグ等で便利なソフト導入しておく
+RUN apt-get update && \
+    apt-get -y install vim && \
+    apt-get -y install git && \
+    apt-get -y install curl && \
+    apt-get -y install wget && \
+    apt-get -y install zip && \
+    apt-get -y install unzip && \
+    rm -rf /var/lib/apt/lists/*
+
 # プラグイン導入
 RUN gem install fluent-plugin-rewrite-tag-filter && \
     gem install fluent-plugin-secure-forward --no-rdoc --no-ri && \
