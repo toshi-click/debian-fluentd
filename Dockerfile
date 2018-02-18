@@ -33,6 +33,8 @@ RUN gem install fluent-plugin-rewrite-tag-filter && \
 # プラグインで必要となるソフトウェアの導入
 RUN apt-get update && \
     apt-get -y install net-tools && \
+    apt-get -y install iproute2 && \
+    apt-get -y install iputils-ping && \
     rm -rf /var/lib/apt/lists/*
 
 COPY fluent.conf /fluentd/etc/
