@@ -30,6 +30,11 @@ RUN gem install fluent-plugin-rewrite-tag-filter && \
     gem install fluent-plugin-rewrite --no-rdoc --no-ri && \
     gem install fluent-plugin-tail-ex --no-rdoc --no-ri
 
+# プラグインで必要となるソフトウェアの導入
+RUN apt-get update && \
+    apt-get -y install net-tools && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY fluent.conf /fluentd/etc/
 COPY entrypoint.sh /bin/
 RUN chmod +x /bin/entrypoint.sh
