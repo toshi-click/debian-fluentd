@@ -3,6 +3,8 @@ FROM fluent/fluentd:debian
 # 作成者情報
 MAINTAINER toshi <toshi@toshi.click>
 
+USER root
+
 # Debian set Locale
 RUN apt-get update && \
     apt-get -y install locales task-japanese && \
