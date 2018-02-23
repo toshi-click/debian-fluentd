@@ -38,9 +38,13 @@ RUN gem install fluent-plugin-rewrite-tag-filter && \
     gem install fluent-plugin-elasticsearch --no-rdoc --no-ri && \
     gem install fluent-plugin-record-reformer --no-rdoc --no-ri && \
     gem install fluent-plugin-cloudwatch-logs --no-rdoc --no-ri && \
+    gem install fluent-plugin-ec2-metadata --no-rdoc --no-ri && \
+    gem install fluent-plugin-s3 --no-rdoc --no-ri && \
     gem install fluent-plugin-slack --no-rdoc --no-ri && \
     gem install fluent-plugin-rewrite --no-rdoc --no-ri && \
-    gem install fluent-plugin-tail-ex --no-rdoc --no-ri
+    gem install fluent-plugin-tail-ex --no-rdoc --no-ri && \
+    gem install fluent-plugin-forest --no-rdoc --no-ri && \
+    gem install fluent-plugin-filter --no-rdoc --no-ri 
 
 # プラグインで必要となるソフトウェアの導入
 RUN apt-get update && \
