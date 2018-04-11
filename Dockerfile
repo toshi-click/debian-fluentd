@@ -43,7 +43,8 @@ RUN gem install fluent-plugin-rewrite-tag-filter && \
     gem install fluent-plugin-slack --no-rdoc --no-ri && \
     gem install fluent-plugin-rewrite --no-rdoc --no-ri && \
     gem install fluent-plugin-tail-ex --no-rdoc --no-ri && \
-    gem install fluent-plugin-forest --no-rdoc --no-ri
+    gem install fluent-plugin-forest --no-rdoc --no-ri && \
+    gem install fluent-plugin-google-cloud --no-rdoc --no-ri 
 
 # プラグインで必要となるソフトウェアの導入
 RUN apt-get update && \
