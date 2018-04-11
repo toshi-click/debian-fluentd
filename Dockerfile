@@ -30,6 +30,11 @@ RUN apt-get update && \
     apt-get -y install wget && \
     apt-get -y install zip && \
     apt-get -y install unzip && \
+    apt-get -y install ruby-dev && \
+    apt-get -y install make && \
+    apt-get -y install sudo && \
+    apt-get -y install gcc && \
+    apt-get -y install libc-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # プラグイン導入
