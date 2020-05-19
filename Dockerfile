@@ -17,7 +17,7 @@ RUN localedef -f UTF-8 -i ja_JP ja_JP.utf8
 # Debian set TimeZone
 ENV TZ=Asia/Tokyo
 RUN echo "${TZ}" > /etc/timezone \
-  && rm /etc/localtime && \
+  && rm /etc/localtime \
   && ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
   && dpkg-reconfigure -f noninteractive tzdata
 
