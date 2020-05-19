@@ -27,15 +27,15 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # プラグイン導入
-RUN gem install fluent-plugin-rewrite-tag-filter \
-    && gem install fluent-plugin-google-cloud --no-rdoc --no-ri \
-    && gem install fluent-plugin-prometheus --no-rdoc --no-ri \
-    && gem install fluent-plugin-elasticsearch --no-rdoc --no-ri \
-    && gem install fluent-plugin-cloudwatch-logs --no-rdoc --no-ri \
-    && gem install fluent-plugin-slack --no-rdoc --no-ri \
-    && gem install fluent-plugin-tail-ex --no-rdoc --no-ri \
-    && gem install fluent-plugin-mail --no-rdoc --no-ri \
-    && gem install fluent-plugin-forest --no-rdoc --no-ri
+# RUN gem install fluent-plugin-rewrite-tag-filter \
+#     && gem install fluent-plugin-google-cloud --no-rdoc --no-ri \
+#     && gem install fluent-plugin-prometheus --no-rdoc --no-ri \
+#     && gem install fluent-plugin-elasticsearch --no-rdoc --no-ri \
+#     && gem install fluent-plugin-cloudwatch-logs --no-rdoc --no-ri \
+#     && gem install fluent-plugin-slack --no-rdoc --no-ri \
+#     && gem install fluent-plugin-tail-ex --no-rdoc --no-ri \
+#     && gem install fluent-plugin-mail --no-rdoc --no-ri \
+#     && gem install fluent-plugin-forest --no-rdoc --no-ri
 
 COPY fluent.conf /fluentd/etc/
 USER fluent
