@@ -38,5 +38,4 @@ RUN gem install fluent-plugin-rewrite-tag-filter \
     && gem install fluent-plugin-forest --no-rdoc --no-ri
 
 COPY fluent.conf /fluentd/etc/
-COPY entrypoint.sh /bin/
-RUN chmod +x /bin/entrypoint.sh
+USER fluent
