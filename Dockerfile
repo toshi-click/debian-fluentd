@@ -1,4 +1,4 @@
-FROM fluent/fluentd:debian
+FROM fluent/fluentd:edge-debian
 
 USER root
 
